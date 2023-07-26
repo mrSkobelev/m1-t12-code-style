@@ -3,7 +3,8 @@ import java.util.Scanner;
 class CalculateDeposit {
     double calculateCapitalizePercent(double amount, double yearRate, int depositPeriod ) {
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
-            return round(pay, 2);
+        
+        return round(pay, 2);
     }
 
     double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
@@ -25,7 +26,6 @@ class CalculateDeposit {
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом,"
             + " 2 - вклад с капитализацией:");
         int action = scanner.nextInt();
-
         double balance = 0;
 
         if (action == 1) {
@@ -35,8 +35,7 @@ class CalculateDeposit {
             System.out.println("Результат вклада: " + amount + " за "
                 + period + " лет превратятся в " + balance);
     }
-public static void main(String[] args)
-    {
+public static void main(String[] args) {
         new CalculateDeposit().calculating();
-}
+    }
 }
